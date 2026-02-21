@@ -1,26 +1,160 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Organizational Intelligence Lab</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body{
-      background:#0b0c0f;
-      color:#e9e9ee;
-      font-family:system-ui;
-      max-width:900px;
-      margin:80px auto;
-      line-height:1.6;
-    }
-    h1{font-size:48px;margin-bottom:16px;}
-    p{opacity:.7;}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Organizational Intelligence Lab</title>
+
+<style>
+:root{
+  --bg:#0b0c0f;
+  --fg:#e9e9ee;
+  --muted:rgba(233,233,238,.7);
+  --line:rgba(233,233,238,.14);
+  --max:960px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto;
+  letter-spacing:-.01em;
+}
+
+.container{
+  width:min(var(--max),calc(100% - 48px));
+  margin:auto;
+}
+
+header{
+  padding:28px 0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+h1{
+  font-size:clamp(40px,5vw,68px);
+  line-height:1.05;
+  margin:80px 0 18px;
+}
+
+p{
+  line-height:1.7;
+  color:var(--muted);
+  font-size:16px;
+}
+
+.section{
+  margin-top:80px;
+}
+
+.hr{
+  height:1px;
+  background:var(--line);
+  border:0;
+  margin:60px 0;
+}
+
+.card{
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:20px;
+  margin-top:16px;
+}
+
+h2{
+  font-size:22px;
+  margin:0 0 10px;
+}
+
+.join{
+  font-size:22px;
+  margin-bottom:12px;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+  border-bottom:1px solid var(--line);
+}
+a:hover{opacity:.8}
+</style>
 </head>
+
 <body>
-  <h1>Organizational Intelligence Lab</h1>
-  <p>
-    We build systems that help organizations think, decide, and act.
-  </p>
+
+<div class="container">
+
+<header>
+Organizational Intelligence Lab
+</header>
+
+<main>
+
+<h1>Organizational Intelligence Lab</h1>
+
+<p>
+Organizational Intelligence Lab is an artificial intelligence research and product company.
+We are building a future where people can collaborate with AI more easily and more safely across a wide range of use cases.
+</p>
+
+<div class="section">
+<p>
+AI capabilities are improving rapidly, yet meaningful collaboration with AI still requires significant effort.
+Teams often rely on repeated inference to identify where systems behave reliably, or large amounts of data to expand those reliable regions.
+We approach this challenge by organizing intelligence.
+Our aim is to shape AI systems whose knowledge is structured so that collaboration becomes more natural, predictable, and safe.
+</p>
+</div>
+
+<hr class="hr"/>
+
+<div class="section">
+
+<div class="card">
+<h2>Principle</h2>
+<p>Well-organized knowledge is easier to use, faster to apply, and safer to scale.</p>
+</div>
+
+<div class="card">
+<p><strong>We help AI learn knowledge that is clear and simple.</strong>
+When knowledge is explicit and structured, it becomes easier to reuse, easier to extend, and easier to understand how different components influence one another.
+This clarity leads to more stable behavior and ultimately better performance.
+</p>
+</div>
+
+<div class="card">
+<p><strong>We also help teams access that knowledge.</strong>
+This includes examining model internals to understand how information is represented, as well as providing tools that evaluate how reliably specific functionality emerges within a model.
+These capabilities make it possible to assess whether AI systems are ready for real-world deployment, including safety requirements and regulatory considerations.
+</p>
+</div>
+
+</div>
+
+<hr class="hr"/>
+
+<div class="section">
+
+<div class="join">Join Us</div>
+
+<p>
+We explore how intelligence is organized inside models and use that understanding to shape training and deployment.
+If you want to work on making AI more structured, understandable, and safe, we’d love to hear from you.
+</p>
+
+<p style="margin-top:20px">
+Contact
+<a href="mailto:sejik.park@kaist.ac.kr">sejik.park@kaist.ac.kr</a>
+</p>
+
+</div>
+
+</main>
+
+</div>
+
 </body>
 </html>
