@@ -1,151 +1,147 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Organizational Intelligence Lab</title>
-  <meta name="description" content="Organizational Intelligence Lab is an artificial intelligence research and product company." />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Organizational Intelligence Lab</title>
 
-  <style>
-    :root{
-      --bg:#fbfbfa;
-      --fg:#121212;
-      --muted:#5a5a5a;
-      --hair:#e6e6e6;
-      --max: 820px;
-    }
+<style>
+:root{
+  --bg:#fbfbfa;
+  --fg:#121212;
+  --muted:#5a5a5a;
+  --hair:#e6e6e6;
+  --max:780px;
+}
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--fg);
-      font-family: Georgia, "Times New Roman", Times, serif;
-      line-height:1.75;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: geometricPrecision;
-    }
+*{box-sizing:border-box}
 
-    .wrap{
-      width:min(var(--max), calc(100% - 44px));
-      margin: 0 auto;
-      padding: 56px 0 96px;
-    }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height:1.75;
+  -webkit-font-smoothing: antialiased;
+}
 
-    .brand{
-      text-align:center;
-      margin-top: 10px;
-    }
-    .brand .mark{
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      font-weight: 300;
-      color:#8b8b8b;
-      font-size: clamp(34px, 4.8vw, 56px);
-      line-height: 1.12;
-    }
-    .brand .rule{
-      width: 200px;
-      height: 1px;
-      background: var(--hair);
-      margin: 18px auto 0;
-    }
+.wrap{
+  width:min(var(--max), calc(100% - 44px));
+  margin:auto;
+  padding:56px 0 96px;
+}
 
-    .content{
-      margin-top: 44px;
-      font-size: 18px;
-    }
-    .content p{
-      margin: 0 0 22px;
-      color: #1a1a1a;
-    }
+/* 워드마크 */
+.brand{
+  text-align:center;
+  margin-top:10px;
+}
+.mark{
+  font-family:ui-sans-serif,system-ui;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  font-weight:300;
+  color:#8b8b8b;
+  font-size:clamp(34px,4.8vw,56px);
+  line-height:1.12;
+}
+.rule{
+  width:200px;
+  height:1px;
+  background:var(--hair);
+  margin:18px auto 0;
+}
 
-    a{
-      color: inherit;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      text-decoration-thickness: 1px;
-    }
-    a:hover{ color:#000; }
+/* 본문 */
+.content{
+  margin-top:44px;
+  font-size:18px;
+}
+.content p{
+  margin:0 0 22px;
+}
 
-    h2{
-      margin: 70px 0 10px;
-      font-size: 34px;
-      line-height:1.15;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
+/* 제목 */
+h3{
+  margin:36px 0 14px;
+  font-size:26px;
+  line-height:1.2;
+  font-weight:700;
+  letter-spacing:-0.01em;
+}
 
-    h3{
-      margin: 70px 0 10px;
-      font-size: 26px;
-      line-height:1.2;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
+/* 제목 바로 아래 문단 breathing */
+.content h3 + p{
+  margin-top:6px;
+}
 
-    /* Contact를 본문처럼 보이게 (footer 제거했으니 여기서만 간단히) */
-    .contact{
-      margin-top: 22px;
-      font-size: 18px;
-      color: #1a1a1a;
-    }
+a{
+  color:inherit;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
 
-    @media (max-width: 520px){
-      .content{font-size: 17px}
-      h2{font-size: 30px}
-      h3{font-size: 24px}
-    }
-  </style>
+@media (max-width:520px){
+  .content{font-size:17px}
+  h3{font-size:24px}
+}
+</style>
 </head>
 
 <body>
-  <div class="wrap">
+<div class="wrap">
 
-    <header class="brand">
-      <div class="mark">Organizational<br/>Intelligence</div>
-      <div class="rule"></div>
-    </header>
+<header class="brand">
+  <div class="mark">Organizational<br>Intelligence</div>
+  <div class="rule"></div>
+</header>
 
-    <main class="content">
-      <p>
-        Organizational Intelligence Lab is an artificial intelligence research and product company.
-        We are building a future where people can collaborate with AI more easily and more safely across a wide range of use cases.
-      </p>
+<main class="content">
 
-      <p>
-        AI capabilities are improving rapidly, yet meaningful collaboration with AI still requires significant effort.
-        Teams often rely on repeated inference to identify where systems behave reliably, or large amounts of data to expand those reliable regions.
-        We approach this challenge by organizing intelligence. Our aim is to shape AI systems whose knowledge is structured so that collaboration becomes more natural,
-        predictable, and safe.
-      </p>
+<p>
+Organizational Intelligence Lab is an artificial intelligence research and product company.
+We are building a future where people can collaborate with AI more easily and more safely across a wide range of use cases.
+</p>
 
-      <h3>Well-organized knowledge is easier to use, faster to apply, and safer to scale.</h3>
+<p>
+AI capabilities are improving rapidly, yet meaningful collaboration with AI still requires significant effort.
+Teams often rely on repeated inference to identify where systems behave reliably, or large amounts of data to expand those reliable regions.
+We approach this challenge by organizing intelligence. Our aim is to shape AI systems whose knowledge is structured so that collaboration becomes more natural,
+predictable, and safe.
+</p>
 
-      <p>
-        <em>We help AI learn knowledge that is clear and simple.</em>
-        When knowledge is explicit and structured, it becomes easier to reuse, easier to extend, and easier to understand how different components influence one another.
-        This clarity leads to more stable behavior and ultimately better performance.
-      </p>
+<h3>
+Well-organized knowledge is easier<br>
+to use, faster to apply, and safer to scale.
+</h3>
 
-      <p>
-        <em>We also help teams access that knowledge.</em>
-        This includes examining model internals to understand how information is represented, as well as providing tools that evaluate how reliably specific functionality emerges within a model.
-        These capabilities make it possible to assess whether AI systems are ready for real-world deployment, including safety requirements and regulatory considerations.
-      </p>
+<p>
+<em>We help AI learn knowledge that is clear and simple.</em>
+When knowledge is explicit and structured, it becomes easier to reuse, easier to extend, and easier to understand how different components influence one another.
+This clarity leads to more stable behavior and ultimately better performance.
+</p>
 
-      <h3>Join Us</h3>
+<p>
+<em>We also help teams access that knowledge.</em>
+This includes examining model internals to understand how information is represented, as well as providing tools that evaluate how reliably specific functionality emerges within a model.
+These capabilities make it possible to assess whether AI systems are ready for real-world deployment, including safety requirements and regulatory considerations.
+</p>
 
-      <p>
-        We explore how intelligence is organized inside models and use that understanding to shape training and deployment.
-        If you want to work on making AI more structured, understandable, and safe, we’d love to hear from you.
-      </p>
+<h3>Join Us</h3>
 
-      <p class="contact">
-        Contact <a href="mailto:sejik.park@kaist.ac.kr">sejik.park@kaist.ac.kr</a>.
-      </p>
-    </main>
-  </div>
+<p>
+We explore how intelligence is organized inside models and use that understanding to shape training and deployment.
+</p>
+
+<p>
+If you want to work on making AI more structured, understandable, and safe, we’d love to hear from you.
+</p>
+
+<p>
+Contact <a href="mailto:sejik.park@kaist.ac.kr">sejik.park@kaist.ac.kr</a>.
+</p>
+
+</main>
+</div>
 </body>
 </html>
