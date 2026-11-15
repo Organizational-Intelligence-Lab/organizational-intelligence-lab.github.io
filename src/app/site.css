@@ -1,0 +1,67 @@
+/* compare-workflow.com 전용 스타일: 기준값은 tokens.css, HundredStart와 같은 공통 모양은 base.css */
+
+/* 헤더 · 푸터 띠: 본문과 같은 최대 너비 · 좌우 여백 */
+.cw-bar { display: flex; align-items: center; gap: var(--space-4); height: 100%; max-width: var(--layout-content-max-width); margin: 0 auto; padding: 0 var(--layout-gutter); box-sizing: border-box; }
+.cw-menu { flex: 1; min-width: 0; scrollbar-width: none; }
+.cw-go { flex-shrink: 0; }
+.cw-muted { margin: 0; color: var(--color-gray-500); }
+a.btn { text-decoration: none; }
+
+/* 푸터: © / 언어 고르기와 도입 문의 */
+.cw-footer { border-top: 1px solid var(--color-gray-200); background: var(--color-gray-50); }
+.cw-footer-bar { justify-content: space-between; flex-wrap: wrap; padding-top: var(--space-5); padding-bottom: var(--space-5); }
+.cw-footer-copy { color: var(--color-gray-600); }
+.cw-footer-group { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4); }
+.cw-lang { display: flex; gap: var(--space-1); font-size: var(--text-label-size); }
+.cw-lang > * { display: inline-flex; align-items: center; min-height: 40px; padding: 0 var(--space-3); border-radius: var(--radius-control); color: var(--color-gray-600); text-decoration: none; }
+.cw-lang > a:hover { background: var(--color-gray-100); }
+.cw-lang > [aria-current] { color: var(--color-primary-700); background: var(--color-primary-50); font-weight: 600; }
+
+/* 첫 주소 (/): 언어를 고르는 동안 두 버튼 */
+.cw-root { display: flex; align-items: center; justify-content: center; gap: var(--space-3); min-height: 100vh; }
+
+/* 첫 화면: 소개 한 칸, 아래 고른 사용 사례 · 최신 뉴스 */
+.cw-hero { max-width: 760px; }
+.cw-section { margin-top: var(--space-7); }
+.cw-section-head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); margin-bottom: var(--space-4); }
+.cw-section-head h2 { margin: 0; }
+
+/* 글 카드: 한 줄에 최소 280px로 채우고 넘치면 다음 줄 */
+.cw-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-4); }
+.cw-card { display: flex; flex-direction: column; gap: var(--space-2); color: inherit; text-decoration: none; transition: border-color var(--motion-button) var(--motion-easing); }
+.cw-card:hover { border-color: var(--color-primary-300); }
+.cw-card:focus-visible { outline: 2px solid var(--color-primary-700); outline-offset: 2px; }
+.cw-card-summary { margin: 0; color: var(--color-gray-600); font-size: var(--text-body-small-size); line-height: 1.7; }
+
+/* 목록 화면 제목 */
+.cw-page-head { display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-6); }
+.cw-page-head h1 { margin: 0; }
+
+/* 글 화면: 읽기 폭 680px */
+.cw-article { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-2); max-width: var(--layout-reading-width); margin: 0 auto; }
+.cw-back { margin: 0 0 var(--space-4) calc(-1 * var(--space-3)); }
+.cw-article-title { margin: 0; }
+.cw-prose { width: 100%; margin-top: var(--space-5); padding-top: var(--space-5); border-top: 1px solid var(--color-gray-200); line-height: 1.8; }
+.cw-prose > :first-child { margin-top: 0; }
+.cw-prose h2 { margin: var(--space-6) 0 var(--space-3); font-size: var(--text-section-title-size); letter-spacing: var(--text-section-title-letter-spacing); }
+.cw-prose h3 { margin: var(--space-5) 0 var(--space-2); font-size: var(--text-item-title-size); }
+.cw-prose p, .cw-prose ul, .cw-prose ol { margin: 0 0 var(--space-4); }
+.cw-prose a { color: var(--color-primary-700); }
+.cw-prose img { max-width: 100%; height: auto; border-radius: var(--radius-control); }
+.cw-prose pre { overflow-x: auto; padding: var(--space-4); border-radius: var(--radius-control); background: var(--color-gray-100); }
+.cw-prose blockquote { margin: 0 0 var(--space-4); padding-left: var(--space-4); border-left: 3px solid var(--color-primary-200); color: var(--color-gray-600); }
+.cw-prose table { width: 100%; border-collapse: collapse; margin-bottom: var(--space-4); font-size: var(--text-label-size); }
+.cw-prose th, .cw-prose td { padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-gray-200); text-align: left; }
+.cw-prose th { color: var(--color-gray-500); background: var(--color-gray-50); }
+
+@media (max-width: 768px) {
+  .cw-section { margin-top: var(--space-6); }
+}
+/* 휴대폰: 브랜드는 표시만, 메뉴 · 이동 버튼의 여백과 화살표를 줄여 한 줄에 둠 */
+@media (max-width: 520px) {
+  .cw-brand-name { display: none; }
+  .site-header .cw-bar { gap: var(--space-2); }
+  .cw-menu { gap: 0; }
+  .cw-menu .btn, .cw-go { padding: var(--space-2); }
+  .cw-go .icon { display: none; }
+}

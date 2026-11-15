@@ -1,0 +1,62 @@
+/* 공통 스타일: HundredStart common.css 가운데 이 사이트가 쓰는 것만 같은 값으로 옮겨 옴 (글자 · 버튼 · 카드 · 아이콘 · 헤더 · 홈 · Whole 화면 틀) */
+
+html { scrollbar-gutter: stable; }
+body { margin: 0; font-family: var(--font-base); font-size: var(--text-body-size); font-weight: var(--text-body-weight); line-height: var(--text-body-line-height); color: var(--color-gray-900); background: var(--color-gray-50); overflow-wrap: break-word; }
+/* 한국어는 낱말 (어절) 중간에서 줄을 바꾸지 않음 */
+:lang(ko) { word-break: keep-all; }
+::selection { background: var(--color-primary-100); }
+code, pre { font-family: var(--font-code); font-size: var(--text-code-size); font-weight: var(--text-code-weight); line-height: var(--text-code-line-height); }
+
+/* 글자 */
+.text-body-small { font-size: var(--text-body-small-size); font-weight: var(--text-body-small-weight); line-height: var(--text-body-small-line-height); }
+.text-item-title { font-size: var(--text-item-title-size); font-weight: var(--text-item-title-weight); line-height: var(--text-item-title-line-height); }
+.text-section-title { font-size: var(--text-section-title-size); font-weight: var(--text-section-title-weight); line-height: var(--text-section-title-line-height); letter-spacing: var(--text-section-title-letter-spacing); }
+.text-page-title { font-size: var(--text-page-title-size); font-weight: var(--text-page-title-weight); line-height: var(--text-page-title-line-height); letter-spacing: var(--text-page-title-letter-spacing); }
+.text-hero-title { margin: var(--space-5) 0; font-size: var(--text-hero-title-size); font-weight: var(--text-hero-title-weight); line-height: var(--text-hero-title-line-height); letter-spacing: var(--text-hero-title-letter-spacing); }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .text-hero-title { font-size: 2.375rem; }
+}
+@media (max-width: 768px) {
+  .text-page-title { font-size: 1.375rem; }
+  .text-hero-title { font-size: 2.125rem; line-height: 1.4; }
+}
+
+/* 버튼: 자리가 넉넉하면 한 줄, 좁으면 줄어들며 줄을 바꿈 */
+.btn { display: inline-flex; flex-shrink: 1; max-width: 100%; align-items: center; justify-content: center; gap: var(--space-2); text-align: center; text-decoration: none; box-sizing: border-box; min-height: var(--layout-touch-min); padding: 0 var(--space-4); border: 1px solid transparent; border-radius: var(--radius-control); font: inherit; font-size: var(--text-button-size); font-weight: var(--text-button-weight); line-height: var(--text-button-line-height); cursor: pointer; transition: background var(--motion-button) var(--motion-easing); }
+.btn-primary { background: var(--color-primary-700); color: var(--color-gray-0); }
+.btn-primary:hover, .btn-primary:active { background: var(--color-primary-800); }
+.btn-secondary { background: var(--color-gray-0); border-color: var(--color-gray-300); color: var(--color-gray-900); }
+.btn-secondary:hover { background: var(--color-gray-100); }
+.btn-ghost { background: none; color: var(--color-gray-600); }
+.btn-ghost:hover { background: var(--color-gray-100); }
+.btn-small { min-height: auto; font-size: 0.875rem; padding: var(--space-2) var(--space-3); }
+
+/* 카드 · 아이콘 */
+.card { padding: var(--space-5); border: 1px solid var(--color-gray-200); border-radius: var(--radius-control); background: var(--color-gray-0); }
+.icon { width: 20px; height: 20px; border-radius: var(--radius-small); }
+.icon-sm { width: 16px; height: 16px; }
+
+/* 헤더: 흰 띠 (스크롤해도 위에 고정), 브랜드 표시, 지금 있는 메뉴는 파란색 */
+.site-header { position: sticky; top: 0; z-index: 30; height: var(--layout-header-height); border-bottom: 1px solid var(--color-gray-200); background: rgba(255, 255, 255, 0.97); }
+.brand { display: inline-flex; align-items: center; gap: var(--space-2); min-height: 48px; flex-shrink: 0; color: var(--color-gray-900); text-decoration: none; font-size: 1.375rem; font-weight: 700; letter-spacing: -0.04em; }
+.brand-mark { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: var(--radius-control); background: var(--color-primary-700); color: var(--color-gray-0); }
+.main-menu { display: flex; align-items: center; gap: var(--space-1); overflow-x: auto; }
+.main-menu .btn { font-size: var(--text-label-size); font-weight: 500; flex-shrink: 0; white-space: nowrap; }
+.main-menu .btn[aria-current="page"] { color: var(--color-primary-700); background: var(--color-primary-50); font-weight: 600; }
+
+/* 홈: 작은 머리말 · 두 색 제목 · 소개 글 · 버튼 줄 */
+.eyebrow { display: inline-flex; align-items: center; gap: var(--space-2); color: var(--color-primary-700); font-size: var(--text-eyebrow-size); font-weight: var(--text-eyebrow-weight); line-height: var(--text-eyebrow-line-height); letter-spacing: var(--text-eyebrow-letter-spacing); }
+.eyebrow-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--color-primary-700); }
+.title-accent { color: var(--color-primary-700); }
+.lead { margin: 0; color: var(--color-gray-600); font-size: 1rem; line-height: 1.8; }
+.home, .public-page { padding: var(--space-7) 0; }
+.home-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
+.home-actions .btn { padding: 0 var(--space-5); }
+@media (max-width: 768px) {
+  .home, .public-page { padding: var(--space-5) 0; }
+}
+
+/* Whole 화면 틀: 헤더 · 본문 · 푸터, 본문은 한 칸 */
+.whole { display: flex; flex-direction: column; min-height: 100vh; }
+.whole > header { height: var(--layout-header-height); }
+.whole > main { flex: 1; width: 100%; max-width: var(--layout-content-max-width); margin: 0 auto; padding: 0 var(--layout-gutter); box-sizing: border-box; }
